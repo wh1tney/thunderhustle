@@ -11,6 +11,6 @@ angular.module('myApp', [
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.
-    when('/', {templateUrl: 'partials/home.html', controller: 'HomeController'}).
+    when('/', {templateUrl: 'partials/home.html', controller: 'HomeCtrl'}).
     otherwise({redirectTo: '/'});
 }]);
