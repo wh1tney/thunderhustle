@@ -1,32 +1,15 @@
 <div class="container marketing">
-
-  <!-- Three columns of text below the carousel -->
-  <div class="row">
-    <div class="col-lg-3">
-      <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-      <h2>song title</h2>
-      <p>artist</p>
-    </div><!-- /.col-lg-3 -->
-    <div class="col-lg-3">
-      <img class="img-circle"
-src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-alt="Generic placeholder image" style="width: 140px; height: 140px;">
-      <h2>song title</h2>
-      <p>artist</p>
-    </div><!-- /.col-lg-3 -->
-    <div class="col-lg-3">
-      <img class="img-circle"
-src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-alt="Generic placeholder image" style="width: 140px; height: 140px;">
-      <h2>song title</h2>
-      <p>artist</p>
-    </div><!-- /.col-lg-3 -->
-    <div class="col-lg-3">
-      <img class="img-circle"
-src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-alt="Generic placeholder image" style="width: 140px; height: 140px;">
-      <h2>song title</h2>
-      <p>artist</p>
-    </div><!-- /.col-lg-3 -->
-  </div><!-- /.row -->
+  <div class="row" ng-repeat="like in likes">
+      <div plangular="{{ like.permalink_url }}">
+        <div ng-if="player.currentTrack == track" class="player">
+          <p>{{ track.title }}</p>
+          <img ng-src="{{ track.artwork_url  }}" alt="{{ track.title }}" />
+          <a ng-href="{{ track.permalink_url }}">View on SoundCloud</a>
+          <button ng-click="previous()">Previous</button>
+          <button ng-click="playPause()">Play</button>
+          <button ng-click="next()">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
