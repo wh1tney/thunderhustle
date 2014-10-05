@@ -3,6 +3,7 @@
       <div plangular="{{ like.permalink_url }}">
         <div ng-if="player.currentTrack == track" class="player">
           <p>{{ track.title }}</p>
+          <p>{{ track.user.username }}</p>
           <img ng-src="{{ track.artwork_url  }}" alt="{{ track.title }}" />
           <a ng-href="{{ track.permalink_url }}">View on SoundCloud</a>
           <button ng-click="previous()">Previous</button>
