@@ -7,10 +7,14 @@ angular.module('myApp.controllers', []).
     SC.get('/users/thunder-hustle/favorites', { limit: 50 }, function(tracks) {
       $scope.$apply(function() {
         if (tracks.length > 1) {
-          $scope.likes = tracks;
+          $scope.likes = tracks.sort(randomize);
         } else {
           console.log("user has no favorites");
         }
       });
     });
+
+    var randomize = function (a, b) {
+      return Math.random() - 0.5;
+    }
   }]);
