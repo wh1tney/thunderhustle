@@ -3,11 +3,11 @@
 /* Controllers */
 
 angular.module('myApp.controllers', []).
-  controller('HomeCtrl', ['$scope', function($scope) {
+  controller('HomeCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
     SC.get('/users/thunder-hustle/favorites', { limit: 50 }, function(tracks) {
       $scope.$apply(function() {
         if (tracks.length > 1) {
-          $scope.likes = tracks.sort(randomize);
+          $rootScope.likes = tracks.sort(randomize);
         } else {
           console.log("user has no favorites");
         }
