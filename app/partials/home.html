@@ -2,26 +2,4 @@
   <div style="height: 100%"></div>
 </header>
 
-<footer>
-  <div ng-repeat="like in likes">
-    <div plangular="{{ like.permalink_url }}">
-      <div ng-if="player.currentTrack == track" class="player">
-<!--              <a ng-href="{{ track.permalink_url }}">
-          <img class="brand-heading" ng-src="{{ track.artwork_url  }}" alt="{{ track.title }}" />
-        </a>
--->
-        <button class="btn-circle" ng-click="previous()">
-          <span class="glyphicon glyphicon-step-backward"></span>
-        </button>
-        <button class="btn-circle" ng-click="playPause()">
-          <span ng-if="player.playing != track" class="glyphicon glyphicon-play"></span>
-          <span ng-if="player.playing == track" class="glyphicon glyphicon-pause"></span>
-        </button>
-        <button class="btn-circle" ng-click="next()">
-          <span class="glyphicon glyphicon-step-forward"></span>
-        </button>
-        <h6> {{ track.title }} - {{ track.user.username }} </h6>
-      </div>
-    </div>
-  </div>
-</footer>
+

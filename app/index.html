@@ -51,6 +51,26 @@ navbar-main-collapse">
 
   <div ng-view></div>
 
+  <footer>
+    <div ng-repeat="like in likes">
+      <div plangular="{{ like.permalink_url }}">
+        <div ng-if="player.currentTrack == track" class="player">
+          <button class="btn-circle" ng-click="previous()">
+            <span class="glyphicon glyphicon-step-backward"></span>
+          </button>
+          <button class="btn-circle" ng-click="playPause()">
+            <span ng-if="player.playing != track" class="glyphicon glyphicon-play"></span>
+            <span ng-if="player.playing == track" class="glyphicon glyphicon-pause"></span>
+          </button>
+          <button class="btn-circle" ng-click="next()">
+            <span class="glyphicon glyphicon-step-forward"></span>
+          </button>
+          <h6><a ng-href="{{ track.permalink_url }}">{{ track.title }}</a> - {{ track.user.username }}</h6>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
   -->
