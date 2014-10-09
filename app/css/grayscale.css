@@ -176,15 +176,15 @@ a:focus {
 }
 
 .btn-circle {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     margin-top: 15px;
     padding: 7px 16px;
     /*border: 2px solid #fff;
     border-radius: 35px;*/
     border: none;
     outline: none;
-    font-size: 40px;
+    font-size: 75px;
     color: #fff;
     background: 0 0;
     -webkit-transition: background .3s ease-in-out;
