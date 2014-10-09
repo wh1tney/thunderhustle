@@ -33,17 +33,17 @@
       <div ng-repeat="like in likes">
         <div plangular="{{ like.permalink_url }}">
           <div ng-if="player.currentTrack == track" class="row vcenter">
-            <div class="col-md-6 col-md-offset-3">
-              <button class="btn-circle" ng-click="previous()">
-                <span class="glyphicon glyphicon-step-backward"></span>
-              </button>
-              <button class="btn-circle" ng-click="playPause()">
-                <span ng-if="player.playing != track" class="glyphicon glyphicon-play"></span>
-                <span ng-if="player.playing == track" class="glyphicon glyphicon-pause"></span>
-              </button>
-              <button class="btn-circle" ng-click="next()">
-                <span class="glyphicon glyphicon-step-forward"></span>
-              </button>
+            <div class="col-md-8 col-md-offset-2">
+              <div class="player-controls">
+                <button class="btn-circle" ng-click="playPause()">
+                  <span ng-if="player.playing != track" class="fa fa-play"></span>
+                  <span ng-if="player.playing == track" class="fa fa-pause"></span>
+                </button>
+                <button class="btn-circle" ng-click="next()">
+                  <span class="fa fa-step-forward"></span>
+                </button>
+               </div>
+              <h3>{{ track.title }}</h3>
             </div>
           </div>
         </div>
